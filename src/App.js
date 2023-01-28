@@ -32,7 +32,11 @@ function App() {
 
         <Routes>
           <Route exact path="/post/:id" element={<PostComments />} />
-          <Route exact path="/" element={<Posts posts={posts} />} />
+          <Route
+            exact
+            path="/"
+            element={<Posts posts={posts} update={forceUpdate} />}
+          />
         </Routes>
       </div>
     </BrowserRouter>
