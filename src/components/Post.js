@@ -5,10 +5,12 @@ import axios from "axios";
 const Post = (props) => {
   const navigate = useNavigate();
   const deletePost = () => {
-    axios.delete("http://192.168.11.118:3333/post/" + props.id).then((res) => {
-      console.log(res.data);
-      props.update();
-    });
+    axios
+      .delete("https://qaqul-webhook.onrender.com/post/" + props.id)
+      .then((res) => {
+        console.log(res.data);
+        props.update();
+      });
   };
   return (
     <Card>
